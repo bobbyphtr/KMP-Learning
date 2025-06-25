@@ -19,3 +19,35 @@ There's a lot of big company that uses KMP such as Netflix, McDonalds, Philips, 
   - Mobile
   - Desktop.
 - We can keep the UI 100% written in native while having the single source of logic code.
+
+# Project Structure
+
+When project is created we have 3 big parts:
+
+- `androidApp` : android app, build able and runable on Android Studio.
+- `iosApp` : ios app, buildable and runable on Xcode
+- `shared` : kotlin multiplatform magic
+
+Android will import
+
+- `androidMain`
+- `commonMain`
+
+iOSApp will import as Framework we included code in:
+
+- `iosMain`
+- `commonMain`
+
+# Actual/Expect Mechanism
+
+expect keyword can be added into a func or class
+
+```kotlin
+interface Platform {
+    val name: String
+}
+
+expect func getPlatform(): Platform
+```
+
+It works same like an abstract class. If a function of class are attached with `expect`, then both on `androidMain` and `iosMain` have to add `actial` func or class as well. The compiler will enforce the "actualization" from the `commonMain` expectation.

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.petros.efthymiou.dailypulse.android.androidApp-mergeDebugResources-41:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "/Users/bobbypehtrus/.gradle/caches/transforms-3/b4bc2eb8ca5f2207e3e12f7825a4f3a8/transformed/core-1.10.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}
