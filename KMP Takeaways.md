@@ -51,3 +51,35 @@ expect func getPlatform(): Platform
 ```
 
 It works same like an abstract class. If a function of class are attached with `expect`, then both on `androidMain` and `iosMain` have to add `actial` func or class as well. The compiler will enforce the "actualization" from the `commonMain` expectation.
+
+# Adding 3rd party dependency for each module
+1. Open The build gradle file `shared.build.gradle.kts`
+2. We can add them on the `sourceSets`.
+
+```kotlin
+sourceSets {
+    val commonMain by getting {
+        dependencies {
+            //put your multiplatform dependencies here
+        }
+    }
+    
+    val androidMain by getting {
+        dependencies {
+            // android main dependency
+        }
+    }
+    
+    val iosMain by getting { 
+        dependencies { 
+            // ios main dependency
+        }
+    }
+    
+    val commonTest by getting {
+        dependencies {
+            implementation(libs.kotlin.test)
+        }
+    }
+}
+```
