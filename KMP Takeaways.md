@@ -38,20 +38,6 @@ iOSApp will import as Framework we included code in:
 - `iosMain`
 - `commonMain`
 
-# Actual/Expect Mechanism
-
-expect keyword can be added into a func or class
-
-```kotlin
-interface Platform {
-    val name: String
-}
-
-expect func getPlatform(): Platform
-```
-
-It works same like an abstract class. If a function of class are attached with `expect`, then both on `androidMain` and `iosMain` have to add `actial` func or class as well. The compiler will enforce the "actualization" from the `commonMain` expectation.
-
 # Adding 3rd party dependency for each module
 1. Open The build gradle file `shared.build.gradle.kts`
 2. We can add them on the `sourceSets`.
@@ -83,3 +69,25 @@ sourceSets {
     }
 }
 ```
+
+# Kotlin Spcifics Keywords
+
+## Actual/Expect Mechanism
+
+expect keyword can be added into a func or class
+
+```kotlin
+interface Platform {
+    val name: String
+}
+
+expect func getPlatform(): Platform
+```
+
+It works same like an abstract class. If a function of class are attached with `expect`, then both on `androidMain` and `iosMain` have to add `actial` func or class as well. The compiler will enforce the "actualization" from the `commonMain` expectation.
+
+## CoroutineScope
+Kick of an asynchornous task. It is similar with `Task` in Swift. If the scope is cancelled, all work started within the `scope` will be cancelled.
+
+## StateFlow
+An exact representation of a Publisher in Swift.
