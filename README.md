@@ -1,3 +1,6 @@
+Copied from 
+https://github.com/petros-efthymiou/DailyPulse
+
 # DailyPulse
 Educational repo offered as material in the course Kotlin Multiplatform Masterclass.
 The course aims to teach the state-of-art KMP development. 
@@ -50,6 +53,4 @@ License
   See the License for the specific language governing permissions and
   limitations under the License.
   ```
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/petrosefth)
 
