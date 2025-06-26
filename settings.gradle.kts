@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KMP_Learning"
+rootProject.name = "DailyPulse"
 include(":androidApp")
 include(":shared")

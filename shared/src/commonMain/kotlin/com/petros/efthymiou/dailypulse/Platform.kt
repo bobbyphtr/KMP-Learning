@@ -8,3 +8,4 @@ expect class Platform {
 
     fun logSystemInfo()
 }
+
